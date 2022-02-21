@@ -1,13 +1,16 @@
-lista1 = [1,2,3,4,5]
-count = 0
+lista = [1, 2, 3, 4, "prueba", 6]
+count = len(lista) - 1
+lInversa = []
 
-def listaInversa(count, lista1):
-    if count >= len(lista1):
+
+def lista_invertida(count, lista):
+    if count < 0:
+        print("Lista normal: ", lista)
+        print("Lista invertida: ", lInversa)
         return
-        
-    print("Elemento: ", lista1[count])
-    if count <= 1
-    listaInversa(count+1, lista1)
-listaInversa(count, lista1)
+
+    lInversa.append(lista[count])
+    lista_invertida(count - 1, lista)
 
 
+lista_invertida(count, lista)
