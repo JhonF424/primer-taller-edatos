@@ -1,13 +1,14 @@
 def sumaEnteros(array, i):
-    sumatoria = 0
     if i >= len(array):
-        return sumatoria
-
-    sumatoria = sumaEnteros(array, 0)
-    return array[i]
+        return []
+    suma = 0
+    sumatoria = sumaEnteros(array, i + 1)
+    suma = suma + sumatoria
+    return sumatoria
+    
 
 
 # main
 
 array = [1, 7, 8, 3, 44, 6, 46]
-sumaEnteros(array, 0)
+print("Resultado: ", sumaEnteros(array, 0))

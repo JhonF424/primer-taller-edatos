@@ -1,4 +1,5 @@
 def invertir(lista, count):
+    
     if count >= len(lista):
         return []
     listaN = []
