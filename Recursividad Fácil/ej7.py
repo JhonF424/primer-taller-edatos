@@ -1,14 +1,17 @@
-def sumaEnteros(array, i):
-    if i >= len(array):
-        return []
-    suma = 0
-    sumatoria = sumaEnteros(array, i + 1)
-    suma = suma + sumatoria
-    return sumatoria
-    
+def sumaPares(num, suma):
+    if num < 2:
+        return 0
+
+    suma = sumaPares(num - 1, suma)
+    if num % 2 == 0:
+        print("Numero: ", num)
+        suma += num
+
+    return suma
 
 
 # main
 
-array = [1, 7, 8, 3, 44, 6, 46]
-print("Resultado: ", sumaEnteros(array, 0))
+num = 20
+suma = 0
+print("Resultado: ", sumaPares(num, suma))
